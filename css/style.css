@@ -8133,7 +8133,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background: #fff;
   font-size: 15px;
   line-height: 1.8;
@@ -8204,7 +8204,9 @@ h1, h2, h3, h4, h5,
   transition: all 0.5s ease;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center; 
+  text-align: center;
+}
   #colorlib-aside:after {
     position: absolute;
     top: 0;
@@ -8212,9 +8214,10 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    background: #0028ff;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%);
     z-index: -1;
-    opacity: .6; }
+    opacity: 1; }
   @media (min-width: 992px) {
     #colorlib-aside {
       width: 25%; } }
@@ -8231,10 +8234,11 @@ h1, h2, h3, h4, h5,
   #colorlib-aside #colorlib-logo {
     display: block;
     width: 100%;
-    font-weight: normal;
-    font-size: 74px;
-    line-height: .8;
-    font-family: "Abril Fatface", cursive; }
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    font-family: "Roboto"; }
     @media (max-width: 1199.98px) {
       #colorlib-aside #colorlib-logo {
         font-size: 62px; } }
@@ -8244,11 +8248,14 @@ h1, h2, h3, h4, h5,
       #colorlib-aside #colorlib-logo {
         margin-bottom: 20px; } }
     #colorlib-aside #colorlib-logo a {
+      margin-top: 24px;
+      margin-bottom: 24px;
       display: inline-block;
       text-align: left;
-      color: #fff; }
+      color: #3c3d3f; }
   #colorlib-aside #colorlib-main-menu ul {
     margin: 0;
+    margin-top: 200px;
     padding: 0; }
     #colorlib-aside #colorlib-main-menu ul li {
       margin: 0 0 10px 0;
@@ -8257,11 +8264,11 @@ h1, h2, h3, h4, h5,
       font-size: 18px;
       font-weight: 500; }
       #colorlib-aside #colorlib-main-menu ul li a {
-        color: white;
+        color: #3c3d3f;
         text-decoration: none;
         position: relative;
         padding: 10px 0;
-        font-family: "Poppins", Arial, sans-serif;
+        font-family: "Roboto", Arial, sans-serif;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
@@ -8274,7 +8281,7 @@ h1, h2, h3, h4, h5,
           bottom: 7px;
           left: 0;
           right: 0;
-          background-color: #fff;
+          background-color: black;
           visibility: hidden;
           -webkit-transform: scaleX(0);
           -moz-transform: scaleX(0);
@@ -8288,7 +8295,7 @@ h1, h2, h3, h4, h5,
           transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         #colorlib-aside #colorlib-main-menu ul li a:hover {
           text-decoration: none;
-          color: white; }
+          color: black; }
           #colorlib-aside #colorlib-main-menu ul li a:hover:after {
             visibility: visible;
             -webkit-transform: scaleX(1);
@@ -8299,7 +8306,7 @@ h1, h2, h3, h4, h5,
       #colorlib-aside #colorlib-main-menu ul li.colorlib-active {
         font-weight: 600; }
         #colorlib-aside #colorlib-main-menu ul li.colorlib-active a {
-          color: #fff; }
+          color: black; }
           #colorlib-aside #colorlib-main-menu ul li.colorlib-active a:after {
             visibility: visible;
             -webkit-transform: scaleX(1);
@@ -8315,14 +8322,14 @@ h1, h2, h3, h4, h5,
     padding: 0 2em;
     font-size: 17px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.7); }
+    color: #3c3d3f; }
     #colorlib-aside .colorlib-footer h3 {
       font-size: 18px;
       font-weight: 500;
-      color: #fff;
-      font-family: "Poppins", Arial, sans-serif; }
+      color: #3c3d3f;
+      font-family: "Roboto", Arial, sans-serif; }
     #colorlib-aside .colorlib-footer a {
-      color: #fff; }
+      color: #3c3d3f; }
     #colorlib-aside .colorlib-footer .pfooter {
       font-size: 14px; }
     #colorlib-aside .colorlib-footer .colorlib-subscribe-form {
@@ -8338,7 +8345,7 @@ h1, h2, h3, h4, h5,
           padding-right: 40px;
           background: transparent !important;
           border: 1px solid rgba(255, 255, 255, 0.2) !important;
-          color: rgba(255, 255, 255, 0.8) !important;
+          color: #3c3d3f !important;
           font-size: 14px;
           -webkit-border-radius: 0;
           -moz-border-radius: 0;
@@ -8597,7 +8604,7 @@ h1, h2, h3, h4, h5,
     font-size: 20px;
     color: rgba(0, 0, 0, 0.7);
     font-weight: 600;
-    font-family: "Poppins", Arial, sans-serif; }
+    font-family: "Roboto", Arial, sans-serif; }
   .blog-wrap .text .icon .position span {
     font-size: 12px;
     text-transform: uppercase;
@@ -8627,7 +8634,7 @@ h1, h2, h3, h4, h5,
       right: 0;
       bottom: 0;
       content: '';
-      background: #0028ff;
+      background: #1E4E74;
       z-index: -1;
       opacity: 0;
       -moz-transition: all 0.3s ease;
@@ -8668,7 +8675,7 @@ h1, h2, h3, h4, h5,
     .blog-entry .text h3 {
       font-weight: 400;
       font-size: 20px;
-      font-family: "Poppins", Arial, sans-serif; }
+      font-family: "Roboto", Arial, sans-serif; }
       .blog-entry .text h3 a {
         color: #000000; }
     .blog-entry .text .meta-wrap {
@@ -8681,7 +8688,7 @@ h1, h2, h3, h4, h5,
         .blog-entry .text .meta-wrap .meta span a {
           color: #000000; }
   .blog-entry.active, .blog-entry:hover {
-    background: #0028ff;
+    background: #1E4E74;
     color: rgba(255, 255, 255, 0.8); }
     .blog-entry.active .text h3 a, .blog-entry:hover .text h3 a {
       color: #fff; }
@@ -9319,3 +9326,37 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.color-white {
+  color: white;
+}
+
+.color-white-portfolio {
+  color: #e5e5e5;
+}
+
+.color-dark {
+  color: #3c3d3f;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.color-blue-portfolio {
+  color: #1E4E74;
+}
+
+.color-blue-portfolio-dark {
+  color: #173142;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  opacity: .3;
+  background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(117,117,117,1) 50%, rgba(255,255,255,1) 100%);
+}
