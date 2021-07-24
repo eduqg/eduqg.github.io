@@ -1,0 +1,21 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Rectangles">
+<rect id="reactangle" x="-1181.6" y="3981.1" width="116" height="3481" transform="rotate(-157 -1181.6 3981.1)" fill="url(#paint0_linear)"/>
+<rect id="reactangle9" x="583.373" y="2770.22" width="116" height="2698" transform="rotate(-157 583.373 2770.22)" fill="url(#paint10_linear)"/>
+<rect id="reactangle19" x="1945.28" y="2521.5" width="116" height="2698" transform="rotate(-157 1945.28 2521.5)" fill="url(#paint20_linear)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="-1123.6" y1="3981.1" x2="-1123.6" y2="7462.1" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint10_linear" x1="641.373" y1="2770.22" x2="641.373" y2="5468.22" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint20_linear" x1="2003.28" y1="2521.5" x2="2003.28" y2="5219.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
