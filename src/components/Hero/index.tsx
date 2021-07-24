@@ -2,7 +2,7 @@ import { IScrollOptions } from '@/pages'
 import React, { useCallback } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+// const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 import {
   Wrapper,
@@ -49,7 +49,7 @@ export const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
               onClick={handleGoToProfile}
               onMouseDown={event => handleMouseDown(event, 'https://github.com/eduqg')}
             >
-              <img src={prefix + '/me.jpeg'} className="me" alt="Eduardo" />
+              <img src="/me.jpeg" className="me" alt="Eduardo" />
             </ButtonProfile>
 
             <SelectLanguage selectedLanguage="portuguese">
@@ -58,14 +58,14 @@ export const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
                 className="portuguese"
                 onClick={() => handleChangeLanguage('Portuguese')}
               >
-                <img src={prefix + '/brazil.png'} className="brazil" alt="Brazil Flag" />
+                <img src="/brazil.png" className="brazil" alt="Brazil Flag" />
               </button>
               <button
                 type="button"
                 className="english"
                 onClick={() => handleChangeLanguage('English')}
               >
-                <img src={prefix + '/usa.png'} className="usa" alt="United States Flag" />
+                <img src="/usa.png" className="usa" alt="United States Flag" />
               </button>
             </SelectLanguage>
           </HeaderLeft>
