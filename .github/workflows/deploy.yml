@@ -53,6 +53,9 @@ jobs:
     - name: Nojekyll file
       run: touch ./out/.nojekyll
 
+    - name: Verify cache
+      run: npm cache verify
+
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
