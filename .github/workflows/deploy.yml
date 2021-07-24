@@ -43,12 +43,12 @@ jobs:
     - name: Build
       run: yarn build
       env:
-        NEXT_PUBLIC_BASE_PATH: /me
+        NEXT_PUBLIC_BASE_PATH: /
 
     - name: Export
       run: yarn export
       env:
-        NEXT_PUBLIC_BASE_PATH: /me
+        NEXT_PUBLIC_BASE_PATH: /
 
     - name: Nojekyll file
       run: touch ./out/.nojekyll
