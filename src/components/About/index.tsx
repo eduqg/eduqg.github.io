@@ -96,7 +96,11 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
           </button>
         </BottomButtons>
 
-        <ButtonDown type="button" onClick={() => scrollToContent('projects')}>
+        <ButtonDown
+          type="button"
+          onClick={() => scrollToContent('projects')}
+          aria-label="scroll-to-projects"
+        >
           <div>
             <FiChevronDown />
             <FiChevronDown />
@@ -105,8 +109,20 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
         </ButtonDown>
       </Content>
 
-      <img src="waves1.svg" alt="Ondas Esquerda" className="wavesLeft" />
-      <img src="waves2.svg" alt="Ondas Direita" className="wavesRight" />
+      <img
+        src="about/waves1.svg"
+        width="503"
+        height="167"
+        alt="Ondas Esquerda"
+        className="wavesLeft"
+      />
+      <img
+        src="about/waves2.svg"
+        width="503"
+        height="167"
+        alt="Ondas Direita"
+        className="wavesRight"
+      />
     </Container>
   )
 }

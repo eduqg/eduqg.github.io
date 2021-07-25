@@ -79,7 +79,11 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
           </button>
         </BottomButtons>
 
-        <ButtonScrollTop type="button" onClick={() => scrollToContent('hero')}>
+        <ButtonScrollTop
+          type="button"
+          onClick={() => scrollToContent('hero')}
+          aria-label="scroll-to-top"
+        >
           Voltar ao início
         </ButtonScrollTop>
 

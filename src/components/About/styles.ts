@@ -29,7 +29,7 @@ export const Container = styled.div`
     right: 0;
     bottom: 0;
     z-index: 10;
-    background: url('light-aluminum.png');
+    background: url('light-aluminum.webp');
     opacity: 0.15;
     -webkit-user-drag: none;
     -khtml-user-drag: none;

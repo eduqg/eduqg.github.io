@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     right: 0;
     bottom: 0;
     z-index: 10;
-    background: url('light-aluminum.png');
+    background: url('light-aluminum.webp');
     opacity: 0.15;
     transform: scaleX(-1);
     -webkit-user-drag: none;
@@ -104,7 +104,7 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
   img.brazil,
   img.usa {
     height: 16px;
-    width: auto;
+    width: 25px;
   }
 
   img.brazil {
@@ -416,7 +416,7 @@ export const BackgroundStars = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: url('stars.svg');
+  background: url('hero/stars.svg');
   height: 100%;
   width: 100%;
   opacity: 0.5;
@@ -454,7 +454,7 @@ export const NorthenLights = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: url('northernLights.svg') center no-repeat;
+  background: url('hero/northernLights.svg') center no-repeat;
   height: 100%;
   width: 100%;
   opacity: 1;
@@ -504,53 +504,53 @@ export const NorthenLightsEffect = styled.div`
   }
 
   div.lightsA {
-    background: url('rectanglesA.svg') center no-repeat;
+    background: url('hero/rectanglesA.svg') center no-repeat;
   }
 
   div.lightsF {
     animation-delay: -${animationTime / numberOfLayers}s;
-    background: url('rectanglesB.svg') center no-repeat;
+    background: url('hero/rectanglesB.svg') center no-repeat;
   }
 
   div.lightsB {
     animation-delay: -${(animationTime * 2) / numberOfLayers}s;
-    background: url('rectanglesC.svg') center no-repeat;
+    background: url('hero/rectanglesC.svg') center no-repeat;
   }
 
   div.lightsG {
     animation: ${SlideUpDown} ${animationTime}s ease-in-out infinite alternate;
     animation-delay: -${(animationTime * 3) / numberOfLayers}s;
-    background: url('rectanglesD.svg') center no-repeat;
+    background: url('hero/rectanglesD.svg') center no-repeat;
   }
 
   div.lightsC {
     animation-delay: -${(animationTime * 4) / numberOfLayers}s;
-    background: url('rectanglesE.svg') center no-repeat;
+    background: url('hero/rectanglesE.svg') center no-repeat;
   }
 
   div.lightsH {
     animation-delay: -${(animationTime * 5) / numberOfLayers}s;
-    background: url('rectanglesF.svg') center no-repeat;
+    background: url('hero/rectanglesF.svg') center no-repeat;
   }
 
   div.lightsD {
     animation-delay: -${(animationTime * 6) / numberOfLayers}s;
-    background: url('rectanglesG.svg') center no-repeat;
+    background: url('hero/rectanglesG.svg') center no-repeat;
   }
 
   div.lightsI {
     animation-delay: -${(animationTime * 7) / numberOfLayers}s;
-    background: url('rectanglesH.svg') center no-repeat;
+    background: url('hero/rectanglesH.svg') center no-repeat;
   }
 
   div.lightsE {
     animation-delay: -${(animationTime * 8) / numberOfLayers}s;
-    background: url('rectanglesI.svg') center no-repeat;
+    background: url('hero/rectanglesI.svg') center no-repeat;
   }
 
   div.lightsJ {
     animation-delay: -${(animationTime * 9) / numberOfLayers}s;
-    background: url('rectanglesJ.svg') center no-repeat;
+    background: url('hero/rectanglesJ.svg') center no-repeat;
   }
 `
 

@@ -3,7 +3,7 @@ import Document, { DocumentProps, Html, Head, Main, NextScript } from 'next/docu
 class MyDocument extends Document<DocumentProps> {
   render(): JSX.Element {
     return (
-      <Html>
+      <Html lang="pt-br">
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

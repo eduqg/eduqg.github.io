@@ -87,7 +87,11 @@ const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
           </ProjectsList>
         ))}
 
-        <ButtonDown type="button" onClick={() => scrollToContent('contactme')}>
+        <ButtonDown
+          type="button"
+          onClick={() => scrollToContent('contactme')}
+          aria-label="scroll-to-contact-me"
+        >
           <div>
             <FiChevronDown />
             <FiChevronDown />
@@ -100,33 +104,41 @@ const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
         <div className="revin" />
         <BackgroundImage
           active={activeBackground === 'revin'}
-          src="projects/revin.png"
+          src="projects/revin.webp"
           className="revin"
           alt="Revin"
+          width="360"
+          height="246"
         />
 
         <div className="pagestation" />
         <BackgroundImage
           active={activeBackground === 'pagestation'}
-          src="projects/pagestation.png"
+          src="projects/pagestation.webp"
           className="pagestation"
           alt="PageStation"
+          width="360"
+          height="292"
         />
 
         <div className="lifetoremind" />
         <BackgroundImage
           active={activeBackground === 'lifetoremind'}
-          src="projects/ltr.png"
+          src="projects/ltr.webp"
           className="lifetoremind"
           alt="Life to Remind"
+          width="360"
+          height="219"
         />
 
         <div className="meditana" />
         <BackgroundImage
           active={activeBackground === 'meditana'}
-          src="projects/meditana.png"
+          src="projects/meditana.webp"
           className="meditana"
           alt="Meditana"
+          width="360"
+          height="290"
         />
       </Background>
     </Container>

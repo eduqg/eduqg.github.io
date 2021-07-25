@@ -47,7 +47,7 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
               onClick={handleGoToProfile}
               onMouseDown={event => handleMouseDown(event, 'https://github.com/eduqg')}
             >
-              <img src="/me.jpeg" className="me" alt="Eduardo" />
+              <img src="hero/me.webp" width="48" height="48" className="me" alt="Eduardo" />
             </ButtonProfile>
 
             <SelectLanguage selectedLanguage="portuguese">
@@ -56,14 +56,26 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
                 className="portuguese"
                 onClick={() => handleChangeLanguage('Portuguese')}
               >
-                <img src="/brazil.png" className="brazil" alt="Brazil Flag" />
+                <img
+                  src="hero/brazil.webp"
+                  width="25"
+                  height="16"
+                  className="brazil"
+                  alt="Brazil Flag"
+                />
               </button>
               <button
                 type="button"
                 className="english"
                 onClick={() => handleChangeLanguage('English')}
               >
-                <img src="/usa.png" className="usa" alt="United States Flag" />
+                <img
+                  src="hero/usa.webp"
+                  width="25"
+                  height="16"
+                  className="usa"
+                  alt="United States Flag"
+                />
               </button>
             </SelectLanguage>
           </HeaderLeft>
@@ -96,7 +108,11 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
           <h2 className="frontend">Frontend Developer</h2>
           <h2 className="designer">Visual Designer</h2>
 
-          <ButtonDown type="button" onClick={() => scrollToContent('about')}>
+          <ButtonDown
+            type="button"
+            onClick={() => scrollToContent('about')}
+            aria-label="scroll-to-about"
+          >
             <div>
               <FiChevronDown />
               <FiChevronDown />

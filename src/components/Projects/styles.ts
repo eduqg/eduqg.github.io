@@ -27,7 +27,7 @@ export const Container = styled.div`
     right: 0;
     bottom: 0;
     z-index: 10;
-    background: url('light-aluminum.png');
+    background: url('light-aluminum.webp');
     opacity: 0.15;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -200,12 +200,13 @@ export const ProjectTopics = styled.div`
 `
 
 export const fadeIn = keyframes`
-  0% {opacity: 0; transform: translate(-50%,-50%)}
-  100% {opacity: 1;transform: translate(-43%,-45%)}
+  \ 0% {opacity: 0; transform: translate(-50%,-50%)}
+  \ 100% {opacity: 1;transform: translate(-43%,-45%)}
 `
+
 export const fadeOut = keyframes`
-  0% {opacity: 1;transform: translate(-43%,-45%)}
-  100% {opacity: 0;transform:  translate(-50%,-50%%)}
+  \ 0% {opacity: 1;transform: translate(-43%,-45%)}
+  \ 100% {opacity: 0;transform:  translate(-50%,-50%)}
 `
 
 export const Background = styled.div<IBackgroundProps>`
