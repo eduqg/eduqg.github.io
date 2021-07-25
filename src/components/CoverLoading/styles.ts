@@ -58,32 +58,32 @@ export const Container = styled.div<ICoverLoadingProps>`
   }
 
   #eduqg path:nth-child(1) {
-    stroke-dasharray: 320px;
-    stroke-dashoffset: 320px;
+    stroke-dasharray: 380px;
+    stroke-dashoffset: 380px;
     animation: ${dash} 2s linear both ${delayTime}s;
   }
 
   #eduqg path:nth-child(2) {
-    stroke-dasharray: 310px;
-    stroke-dashoffset: 310px;
+    stroke-dasharray: 580px;
+    stroke-dashoffset: 580px;
     animation: ${dash} 2s linear both ${delayTime * 1.5}s;
   }
 
   #eduqg path:nth-child(3) {
-    stroke-dasharray: 360px;
-    stroke-dashoffset: 360px;
+    stroke-dasharray: 430px;
+    stroke-dashoffset: 430px;
     animation: ${dash} 2s linear both ${delayTime * 2}s;
   }
 
   #eduqg path:nth-child(4) {
-    stroke-dasharray: 310px;
-    stroke-dashoffset: 310px;
+    stroke-dasharray: 870px;
+    stroke-dashoffset: 870px;
     animation: ${dash} 2s linear both ${delayTime * 2.5}s;
   }
 
   #eduqg path:nth-child(5) {
-    stroke-dasharray: 410px;
-    stroke-dashoffset: 410px;
+    stroke-dasharray: 710px;
+    stroke-dashoffset: 710px;
     animation: ${dash} 2s linear both ${delayTime * 3}s;
   }
 `
