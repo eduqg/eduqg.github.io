@@ -1,5 +1,4 @@
-import React from 'react'
-import { useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { FiGithub, FiLinkedin, FiMail, FiCoffee, FiChevronDown } from 'react-icons/fi'
 
 import { mailToLink } from '@/utils/emailMessage'
@@ -111,15 +110,15 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
 
       <img
         src="about/waves1.svg"
-        width="503"
-        height="167"
+        width="768"
+        height="311"
         alt="Ondas Esquerda"
         className="wavesLeft"
       />
       <img
         src="about/waves2.svg"
-        width="503"
-        height="167"
+        width="768"
+        height="311"
         alt="Ondas Direita"
         className="wavesRight"
       />
