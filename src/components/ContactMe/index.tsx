@@ -21,7 +21,7 @@ interface IContactMeProps {
   scrollToContent(content: IScrollOptions): void
 }
 
-export const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
+const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
       window.open(goToUrl)
@@ -92,3 +92,5 @@ export const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
     </Container>
   )
 }
+
+export default ContactMe

@@ -16,7 +16,6 @@ export const Container = styled.button<IContainerButton>`
   color: var(--almost-white);
   font-size: 20px;
   background: var(--primary);
-  font-family: 'Open Sans';
 
   &:hover {
     background: var(--primary-dark);

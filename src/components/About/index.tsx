@@ -20,7 +20,7 @@ interface IAboutProps {
   scrollToContent(content: IScrollOptions): void
 }
 
-export const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
+const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
       window.open(goToUrl)
@@ -110,3 +110,5 @@ export const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
     </Container>
   )
 }
+
+export default About

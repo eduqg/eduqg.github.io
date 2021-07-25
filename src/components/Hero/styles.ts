@@ -338,13 +338,13 @@ export const Content = styled.div`
 `
 
 const bounceAnimation = keyframes`
-  0% {
+  \ 0% {
     -webkit-transform: translateY(0);
   }
-  75% {
+  \ 75% {
     -webkit-transform: translateY(-4px);
   }
-  100% {
+  \ 100% {
     -webkit-transform: translateY(0);
   }
 `
@@ -425,13 +425,13 @@ export const BackgroundStars = styled.div`
 `
 
 const GradientAnimation = keyframes`
-  0% {
+  \ 0% {
     background-position: 5% 0%;
   }
-  50% {
+  \ 50% {
     background-position: 96% 100%;
   }
-  100% {
+  \ 100% {
     background-position: 5% 0%;
   }
 `
@@ -462,10 +462,10 @@ export const NorthenLights = styled.div`
 `
 
 const SlideUpDown = keyframes`
-  0% {
+  \ 0% {
     transform: translate(160px,-377px);
   }
-  100% {
+  \ 100% {
     transform: translate(0,0);
   }
 `
@@ -486,13 +486,13 @@ export const NorthenLightsEffect = styled.div`
     width: 190%;
     height: 200%;
     z-index: 10;
-    animation: ${SlideUpDown} ${animationTime}s ease-in infinite alternate;
 
     @media screen and (min-width: 640px) {
       top: 0px;
       left: -300px;
       width: 180%;
       height: 150%;
+      animation: ${SlideUpDown} ${animationTime}s ease-in infinite alternate;
     }
 
     @media screen and (min-width: 1280px) {
@@ -558,16 +558,16 @@ export const NorthenLightsEffect = styled.div`
 
 // -->
 const fallingComet1 = keyframes`
-  0% {
+  \ 0% {
     -webkit-transform:translate(-40vw,10vh) rotate(110deg);
   }
 
-  30% {
+  \ 30% {
     -webkit-transform: translate(120vw,70vh) rotate(110deg);
     opacity: 0;
   }
 
-  100% {
+  \ 100% {
     -webkit-transform: translate(120vw,70vh) rotate(110deg);
     opacity: 0;
   }
@@ -575,32 +575,32 @@ const fallingComet1 = keyframes`
 
 // <--
 const fallingComet2 = keyframes`
-  0% {
+  \ 0% {
     -webkit-transform:translate(130vw, 10vh) rotate(-102deg);
   }
 
-  30% {
+  \ 30% {
     -webkit-transform: translate(-80vw, 60vh) rotate(-105deg);
     opacity: 0;
   }
 
-  100% {
+  \ 100% {
     -webkit-transform: translate(-80vw, 60vh) rotate(-105deg);
     opacity: 0;
   }
 `
 // -->
 const fallingComet3 = keyframes`
-  0% {
+  \ 0% {
     -webkit-transform: translate(30vw,-40vh) rotate(160deg);
   }
 
-  30% {
+  \ 30% {
     -webkit-transform: translate(80vw,120vh) rotate(160deg);
     opacity: 0;
   }
 
-  100% {
+  \ 100% {
     -webkit-transform: translate(80vw,120vh) rotate(160deg);
     opacity: 0;
   }

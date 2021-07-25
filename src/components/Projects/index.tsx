@@ -55,21 +55,8 @@ const projects: IProjectsData[] = [
   },
 ]
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
+const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
   const [activeBackground, setActiveBackground] = useState<IProjects | null>(null)
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleActivateProject = useCallback(
-    (projectName: IProjects) => {
-      if (projectName !== activeBackground) {
-        setActiveBackground(projectName)
-      } else {
-        setActiveBackground(null)
-      }
-    },
-    [activeBackground],
-  )
 
   const handleNavigateTo = useCallback((projectUrl: string) => {
     window.open(projectUrl)
@@ -145,3 +132,5 @@ export const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
     </Container>
   )
 }
+
+export default Projects
