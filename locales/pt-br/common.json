@@ -1,0 +1,13 @@
+{
+  "home_link": "Início",
+  "about_link": "Sobre",
+  "projects_link": "Projetos",
+  "contact_link": "Contato",
+  "frontend_role": "Desenvolvedor Frontend",
+  "design_role": "Designer Visual",
+
+
+  "404_title": "Tem algo de errado com esse link",
+  "404_description": "Acho melhor voltar para a página inicial",
+  "404_go_back": "Voltar ao início"
+}

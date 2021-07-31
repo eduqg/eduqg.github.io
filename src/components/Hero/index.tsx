@@ -1,5 +1,7 @@
-import { IScrollOptions } from '@/pages'
 import React, { useCallback } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 import { FiChevronDown } from 'react-icons/fi'
 
 import {
@@ -19,13 +21,15 @@ import {
   Comets,
 } from './styles'
 
+import { IScrollOptions } from '@/pages'
+
 interface IHeroProps {
   scrollToContent(content: IScrollOptions): void
 }
 
 const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleChangeLanguage = useCallback((language: string) => {}, [])
+  const router = useRouter()
+  const { t } = useTranslation('common')
 
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
@@ -50,63 +54,60 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
               <img src="hero/me.webp" width="48" height="48" className="me" alt="Eduardo" />
             </ButtonProfile>
 
-            <SelectLanguage selectedLanguage="portuguese">
-              <button
-                type="button"
-                className="portuguese"
-                onClick={() => handleChangeLanguage('Portuguese')}
-              >
-                <img
-                  src="hero/brazil.webp"
-                  width="25"
-                  height="16"
-                  className="brazil"
-                  alt="Brazil Flag"
-                />
-              </button>
-              <button
-                type="button"
-                className="english"
-                onClick={() => handleChangeLanguage('English')}
-              >
-                <img
-                  src="hero/usa.webp"
-                  width="25"
-                  height="16"
-                  className="usa"
-                  alt="United States Flag"
-                />
-              </button>
+            <SelectLanguage selectedLanguage={router.locale === 'pt-br' ? 'portuguese' : 'english'}>
+              <Link href="/" locale="pt-br">
+                <div className="portuguese">
+                  <img
+                    src="hero/brazil.webp"
+                    width="25"
+                    height="16"
+                    className="brazil"
+                    alt="Brazil Flag"
+                  />
+                </div>
+              </Link>
+
+              <Link href="/" locale="en">
+                <div className="english">
+                  <img
+                    src="hero/usa.webp"
+                    width="25"
+                    height="16"
+                    className="usa"
+                    alt="United States Flag"
+                  />
+                </div>
+              </Link>
             </SelectLanguage>
           </HeaderLeft>
 
           <HeaderRight>
             <ButtonHeader type="button" onClick={() => scrollToContent('hero')} className="home">
-              Home
+              {t('home_link')}
             </ButtonHeader>
             <ButtonHeader type="button" onClick={() => scrollToContent('about')} className="about">
-              About
+              {t('about_link')}
             </ButtonHeader>
             <ButtonHeader
               type="button"
               onClick={() => scrollToContent('projects')}
               className="projects"
             >
-              Projects
+              {t('projects_link')}
             </ButtonHeader>
             <ButtonHeader
               type="button"
               onClick={() => scrollToContent('contactme')}
               className="contactme"
             >
-              Contact
+              {t('contact_link')}
             </ButtonHeader>
           </HeaderRight>
         </Header>
         <Content>
           <h1>Eduardo Quintino Gomes</h1>
-          <h2 className="frontend">Frontend Developer</h2>
-          <h2 className="designer">Visual Designer</h2>
+          <h2 className="frontend"> {t('frontend_role')}</h2>
+          <h2 className="designer"> {t('design_role')}</h2>
 
           <ButtonDown
             type="button"

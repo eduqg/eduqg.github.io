@@ -1,4 +1,6 @@
-module.exports = {
+const nextTranslate = require('next-translate')
+
+module.exports = nextTranslate({
   baseParh: process.env.NEXT_PUBLIC_BASE_PATH,
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   async headers() {
@@ -15,4 +17,4 @@ module.exports = {
       },
     ]
   },
-}
+})

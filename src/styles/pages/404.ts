@@ -19,7 +19,7 @@ export const Content = styled.div`
   h1 {
     font-weight: bold;
     font-size: 3.6rem;
-    color: #fdfdfd;
+    color: var(--almost-white);
     text-align: center;
     margin-bottom: 32px;
     line-height: 120%;
@@ -33,7 +33,7 @@ export const Content = styled.div`
     font-style: normal;
     font-size: 1.8rem;
     line-height: 1.8rem;
-    color: var(--color-text-light-gray-blue);
+    color: var(--gray-blue);
     text-align: center;
     line-height: 140%;
     margin-bottom: 32px;

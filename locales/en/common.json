@@ -1,0 +1,14 @@
+{
+  "home_link": "Home",
+  "about_link": "About",
+  "projects_link": "Projects",
+  "contact_link": "Contact",
+  "frontend_role": "Frontend Developer",
+  "design_role": "Visual Designer",
+
+
+
+  "404_title": "There is something wrong with this link",
+  "404_description": "I think is better go back to homepage",
+  "404_go_back": "Go Home"
+}

@@ -107,20 +107,11 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     width: 25px;
   }
 
-  img.brazil {
-  }
-
-  img.usa {
-    animation: ${appearFromBottom} ${appearItemsTime}s ease;
-    animation-delay: ${coverLoadingTime + apperItemsDelay * 2}s;
-    animation-fill-mode: both;
-  }
-
-  button.portuguese,
-  button.english {
+  div.portuguese,
+  div.english {
     background-color: transparent;
     border: 0;
-    height: 24px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,6 +122,7 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     opacity: 0.8;
     width: 40px;
     margin: 0 auto;
+    cursor: pointer;
 
     &:after {
       content: '';
@@ -154,23 +146,31 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     }
   }
 
-  ${props =>
-    props.selectedLanguage === 'portuguese'
-      ? css`
-          button.portuguese {
-            opacity: 1;
-            background-color: rgba(255, 255, 255, 0.2);
-            animation: ${appearFromBottom} ${appearItemsTime}s ease;
-            animation-delay: ${coverLoadingTime + apperItemsDelay}s;
-            animation-fill-mode: both;
-          }
-        `
-      : css`
-          button.english {
-            opacity: 1;
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-        `}
+  div.portuguese {
+    animation: ${appearFromBottom} ${appearItemsTime}s ease;
+    animation-delay: ${coverLoadingTime + apperItemsDelay}s;
+    animation-fill-mode: both;
+
+    ${props =>
+      props.selectedLanguage === 'portuguese' &&
+      css`
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+      `}
+  }
+
+  div.english {
+    animation: ${appearFromBottom} ${appearItemsTime}s ease;
+    animation-delay: ${coverLoadingTime + apperItemsDelay * 2}s;
+    animation-fill-mode: both;
+
+    ${props =>
+      props.selectedLanguage === 'english' &&
+      css`
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+      `}
+  }
 
   @media screen and (min-width: 640px) {
     flex-direction: row;

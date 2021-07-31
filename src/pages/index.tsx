@@ -24,6 +24,10 @@ const Home: React.FC = () => {
   const [disableCoverLoading, setDisableCoverLoading] = useState(false)
 
   useEffect(() => {
+    console.log(router.locale)
+  }, [router.locale])
+
+  useEffect(() => {
     const timer1 = setTimeout(() => setDisableCoverLoading(true), delay * 1000)
     return () => {
       clearTimeout(timer1)
