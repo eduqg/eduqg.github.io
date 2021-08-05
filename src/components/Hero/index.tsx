@@ -1,8 +1,7 @@
 import React, { useCallback } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
 import { FiChevronDown } from 'react-icons/fi'
+
+import { useTranslation } from '@/hooks/translation'
 
 import {
   Wrapper,
@@ -28,8 +27,7 @@ interface IHeroProps {
 }
 
 const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
-  const router = useRouter()
-  const { t } = useTranslation('common')
+  const { t, updateLanguage } = useTranslation()
 
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
@@ -54,8 +52,8 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
               <img src="hero/me.webp" width="48" height="48" className="me" alt="Eduardo" />
             </ButtonProfile>
 
-            <SelectLanguage selectedLanguage={router.locale === 'pt-br' ? 'portuguese' : 'english'}>
-              <Link href="/" locale="pt-br">
+            <SelectLanguage selectedLanguage={t.language}>
+              <button type="button" onClick={() => updateLanguage({ language: 'pt-br' })}>
                 <div className="portuguese">
                   <img
                     src="hero/brazil.webp"
@@ -65,9 +63,9 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
                     alt="Brazil Flag"
                   />
                 </div>
-              </Link>
+              </button>
 
-              <Link href="/" locale="en">
+              <button type="button" onClick={() => updateLanguage({ language: 'en' })}>
                 <div className="english">
                   <img
                     src="hero/usa.webp"
@@ -77,37 +75,37 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
                     alt="United States Flag"
                   />
                 </div>
-              </Link>
+              </button>
             </SelectLanguage>
           </HeaderLeft>
 
           <HeaderRight>
             <ButtonHeader type="button" onClick={() => scrollToContent('hero')} className="home">
-              {t('home_link')}
+              {t.home_link}
             </ButtonHeader>
             <ButtonHeader type="button" onClick={() => scrollToContent('about')} className="about">
-              {t('about_link')}
+              {t.about_link}
             </ButtonHeader>
             <ButtonHeader
               type="button"
               onClick={() => scrollToContent('projects')}
               className="projects"
             >
-              {t('projects_link')}
+              {t.projects_link}
             </ButtonHeader>
             <ButtonHeader
               type="button"
               onClick={() => scrollToContent('contactme')}
               className="contactme"
             >
-              {t('contact_link')}
+              {t.contact_link}
             </ButtonHeader>
           </HeaderRight>
         </Header>
         <Content>
           <h1>Eduardo Quintino Gomes</h1>
-          <h2 className="frontend"> {t('frontend_role')}</h2>
-          <h2 className="designer"> {t('design_role')}</h2>
+          <h2 className="frontend"> {t.frontend_role}</h2>
+          <h2 className="designer"> {t.design_role}</h2>
 
           <ButtonDown
             type="button"

@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components'
 import { appearFromBottom, disableInteractons } from '@/styles/GlobalStyles'
 
 interface ISelectLanguageProps {
-  selectedLanguage: 'portuguese' | 'english'
+  selectedLanguage: string
 }
 
 export const Wrapper = styled.div`
@@ -107,6 +107,12 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     width: 25px;
   }
 
+  button {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+
   div.portuguese,
   div.english {
     background-color: transparent;
@@ -152,7 +158,7 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     animation-fill-mode: both;
 
     ${props =>
-      props.selectedLanguage === 'portuguese' &&
+      props.selectedLanguage === 'pt-br' &&
       css`
         opacity: 1;
         background-color: rgba(255, 255, 255, 0.2);
@@ -165,7 +171,7 @@ export const SelectLanguage = styled.div<ISelectLanguageProps>`
     animation-fill-mode: both;
 
     ${props =>
-      props.selectedLanguage === 'english' &&
+      props.selectedLanguage === 'en' &&
       css`
         opacity: 1;
         background-color: rgba(255, 255, 255, 0.2);

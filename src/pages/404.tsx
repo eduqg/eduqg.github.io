@@ -1,33 +1,39 @@
+// import React from 'react'
+// import Link from 'next/link'
+// import { GetStaticPaths, GetStaticProps } from 'next'
+
+// import { useTranslation } from '@/hooks/translation'
+
+// import { Container, Content } from '@/styles/pages/404'
+
+// const NotFound: React.FC = () => {
+//   const { t } = useTranslation()
+
+//   return (
+//     <Container>
+//       <Content>
+//         <h1>
+//           {t.title_404}{' '}
+//           <span role="img" aria-label="thinking">
+//             🤔
+//           </span>
+//         </h1>
+//         <h2>{t.description_404}</h2>
+
+//         <Link href={`/`}>{t.go_back_404}</Link>
+//       </Content>
+//     </Container>
+//   )
+// }
+
+// export default NotFound
+
 import React from 'react'
-import useTranslation from 'next-translate/useTranslation'
-import Link from 'next/link'
 
-import { Container, Content } from '@/styles/pages/404'
+// import { Container } from './styles';
 
-import { GetStaticProps } from 'next'
-
-const NotFound: React.FC = () => {
-  const { t } = useTranslation('common')
-
-  return (
-    <Container>
-      <Content>
-        <h1>
-          {t('404_title')}{' '}
-          <span role="img" aria-label="thinking">
-            🤔
-          </span>
-        </h1>
-        <h2>{t('404_description')}</h2>
-
-        <Link href={`/`}>{t('404_go_back')}</Link>
-      </Content>
-    </Container>
-  )
+const pages: React.FC = () => {
+  return <div />
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  return { props: {} }
-}
-
-export default NotFound
+export default pages

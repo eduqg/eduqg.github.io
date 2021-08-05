@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 
+import AppProvider from '@/hooks'
+
 const SEO = dynamic(() => import('../components/SEO'))
 const Hero = dynamic(() => import('../components/Hero'))
 const About = dynamic(() => import('../components/About'))
@@ -22,10 +24,6 @@ const Home: React.FC = () => {
   const projectsRef = useRef(null)
   const contactMeRef = useRef(null)
   const [disableCoverLoading, setDisableCoverLoading] = useState(false)
-
-  useEffect(() => {
-    console.log(router.locale)
-  }, [router.locale])
 
   useEffect(() => {
     const timer1 = setTimeout(() => setDisableCoverLoading(true), delay * 1000)
@@ -66,20 +64,22 @@ const Home: React.FC = () => {
         shouldIndexPage
       />
 
-      <div ref={heroRef}>
-        <Hero scrollToContent={scrollToContent} />
-      </div>
-      <div ref={aboutRef}>
-        <About scrollToContent={scrollToContent} />
-      </div>
-      <div ref={projectsRef}>
-        <Projects scrollToContent={scrollToContent} />
-      </div>
-      <div ref={contactMeRef}>
-        <ContactMe scrollToContent={scrollToContent} />
-      </div>
+      <AppProvider>
+        <div ref={heroRef}>
+          <Hero scrollToContent={scrollToContent} />
+        </div>
+        <div ref={aboutRef}>
+          <About scrollToContent={scrollToContent} />
+        </div>
+        <div ref={projectsRef}>
+          <Projects scrollToContent={scrollToContent} />
+        </div>
+        <div ref={contactMeRef}>
+          <ContactMe scrollToContent={scrollToContent} />
+        </div>
 
-      <CoverLoading display={disableCoverLoading ? 'none' : 'flex'}></CoverLoading>
+        <CoverLoading display={disableCoverLoading ? 'none' : 'flex'}></CoverLoading>
+      </AppProvider>
     </Container>
   )
 }
