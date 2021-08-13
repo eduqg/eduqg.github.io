@@ -16,7 +16,9 @@ const SEO: React.FC<ISEOProps> = ({
   shouldIndexPage,
 }) => {
   const pageTitle = `${title}${!shouldExcludeTitleSuffix ? ' | eduqg.github.io' : ''}`
-  const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null
+  const pageImage = image ? `https://eduqg.github.io/${image}` : null
+
+  console.log(pageImage)
   return (
     <Head>
       <title>{pageTitle}</title>
@@ -43,8 +45,8 @@ const SEO: React.FC<ISEOProps> = ({
       <meta property="og:image:secure_url" content={pageImage} />
       <meta property="og:image:alt" content="Thumbnail" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:width" content="1901" />
+      <meta property="og:image:height" content="947" />
 
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -53,8 +55,8 @@ const SEO: React.FC<ISEOProps> = ({
       <meta name="twitter:image" content={pageImage} />
       <meta name="twitter:image:src" content={pageImage} />
       <meta name="twitter:image:alt" content="Thumbnail" />
-      <meta name="twitter:image:width" content="1200" />
-      <meta name="twitter:image:height" content="620" />
+      <meta name="twitter:image:width" content="1901" />
+      <meta name="twitter:image:height" content="947" />
     </Head>
   )
 }

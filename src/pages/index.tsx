@@ -59,7 +59,7 @@ const Home: React.FC = () => {
     <Container>
       <SEO
         title="Eduardo Quintino Gomes | Frontend e Design"
-        image="logo.png"
+        image="eduqg-portfolio.png"
         shouldExcludeTitleSuffix
         shouldIndexPage
       />
