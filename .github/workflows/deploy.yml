@@ -54,8 +54,7 @@ jobs:
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
-      env: 
-        NEXT_PUBLIC_GTM_ID: ${{secrets.NEXT_PUBLIC_GTM_ID}}
       with:
+        NEXT_PUBLIC_GTM_ID: ${{secrets.NEXT_PUBLIC_GTM_ID}}
         branch: gh-pages # The branch the action should deploy to.
         folder: out # The folder the action should deploy.
