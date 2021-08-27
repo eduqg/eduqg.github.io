@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react'
 import { FiGithub, FiLinkedin, FiMail, FiCoffee, FiChevronDown } from 'react-icons/fi'
 
+import { useTranslation } from '@/hooks/translation'
 import { mailToLink } from '@/utils/emailMessage'
 
 import {
@@ -20,6 +21,8 @@ interface IAboutProps {
 }
 
 const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
+  const { t } = useTranslation()
+
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
       window.open(goToUrl)
@@ -32,29 +35,26 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
 
   return (
     <Container>
-      <h1>Sobre</h1>
+      <h1>{t.about_title}</h1>
       <Content>
         <div className="about">
-          <h2>Olá, meu nome é Eduardo.</h2>
-          <h2>
-            Sou Engenheiro de Software apaixonado por Frontend e Design. Atualmente trabalho com
-            desenvolvimento em ReactJS e React Native e Design utilizando Figma.
-          </h2>
+          <h2>{t.about_hello}</h2>
+          <h2>{t.about_paragraph}</h2>
         </div>
 
         <Academic>
-          <h2>Formação Acadêmica</h2>
+          <h2>{t.about_academic_title}</h2>
 
           <AcademicList>
             <AcademicItem>
-              <h2>Engenharia de Software</h2>
+              <h2>{t.about_software_engineering}</h2>
               <h3>Universidade de Brasília - UnB/FGA</h3>
-              <h3>Graduação</h3>
+              <h3>{t.about_software_engineering_graduation}</h3>
             </AcademicItem>
             <AcademicItem>
-              <h2>User Experience Design and Beyond</h2>
+              <h2>{t.about_design}</h2>
               <h3>Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS</h3>
-              <h3>Pós-Graduação em andamento</h3>
+              <h3>{t.about_design_postgraduate}</h3>
             </AcademicItem>
           </AcademicList>
         </Academic>

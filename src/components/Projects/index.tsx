@@ -1,5 +1,7 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useMemo } from 'react'
 import { FiChevronDown, FiExternalLink } from 'react-icons/fi'
+
+import { useTranslation } from '@/hooks/translation'
 
 import {
   Container,
@@ -28,35 +30,38 @@ interface IAboutProps {
   scrollToContent(content: IScrollOptions): void
 }
 
-const projects: IProjectsData[] = [
-  {
-    id: 'revin',
-    name: 'Revin',
-    topics: ['Frontend', 'Integrante de Design'],
-    projectUrl: 'https://revin.com.br',
-  },
-  {
-    id: 'pagestation',
-    name: 'PageStation',
-    topics: ['Frontend', 'Pessoal'],
-    projectUrl: 'https://ps5-inspired-ui-reactjs.netlify.app/',
-  },
-  {
-    id: 'lifetoremind',
-    name: 'Life to Remind',
-    topics: ['FullStack', 'Design'],
-    projectUrl: 'https://lifetoremindhub.herokuapp.com/',
-  },
-  {
-    id: 'meditana',
-    name: 'Meditana',
-    topics: ['Frontend', 'Pessoal'],
-    projectUrl: 'https://meditana-meditation.firebaseapp.com/',
-  },
-]
-
 const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
+  const { t } = useTranslation()
   const [activeBackground, setActiveBackground] = useState<IProjects | null>(null)
+
+  const projects: IProjectsData[] = useMemo(() => {
+    return [
+      {
+        id: 'revin',
+        name: 'Revin',
+        topics: ['Frontend', t.projects_design_member],
+        projectUrl: 'https://revin.com.br',
+      },
+      {
+        id: 'pagestation',
+        name: 'PageStation',
+        topics: ['Frontend', t.projects_personal],
+        projectUrl: 'https://ps5-inspired-ui-reactjs.netlify.app/',
+      },
+      {
+        id: 'lifetoremind',
+        name: 'Life to Remind',
+        topics: ['FullStack', 'Design'],
+        projectUrl: 'https://lifetoremindhub.herokuapp.com/',
+      },
+      {
+        id: 'meditana',
+        name: 'Meditana',
+        topics: ['Frontend', t.projects_personal],
+        projectUrl: 'https://meditana-meditation.firebaseapp.com/',
+      },
+    ]
+  }, [t])
 
   const handleNavigateTo = useCallback((projectUrl: string) => {
     window.open(projectUrl)
@@ -65,7 +70,7 @@ const Projects: React.FC<IAboutProps> = ({ scrollToContent }) => {
   return (
     <Container>
       <Content>
-        <h1>Projetos</h1>
+        <h1>{t.projects_title}</h1>
         {projects.map(project => (
           <ProjectsList key={project.id}>
             <ProjectItem>

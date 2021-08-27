@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 0;
 
   h1 {
@@ -61,7 +62,7 @@ export const Content = styled.div`
   height: 70%;
   max-width: 1440px;
   padding: 0 16px;
-  margin-top: auto;
+  margin-top: 10vh;
 `
 
 export const Info = styled.div`
@@ -261,9 +262,14 @@ export const ButtonScrollTop = styled.button`
 export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 70%;
+  max-width: 1440px;
+  padding: 0 16px;
   font-size: 1.6rem;
   line-height: 120%;
+  margin-top: auto;
 
   h3 {
     font-size: 1.6rem;

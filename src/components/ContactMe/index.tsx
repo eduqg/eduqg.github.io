@@ -3,6 +3,7 @@ import { useCallback } from 'react'
 import { FiGithub, FiLinkedin, FiMail, FiCoffee } from 'react-icons/fi'
 
 import packageJson from '../../../package.json'
+import { useTranslation } from '@/hooks/translation'
 import { mailToLink } from '@/utils/emailMessage'
 
 import {
@@ -22,6 +23,8 @@ interface IContactMeProps {
 }
 
 const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
+  const { t } = useTranslation()
+
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
       window.open(goToUrl)
@@ -34,21 +37,21 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
 
   return (
     <Container>
-      <h1>Contato</h1>
+      <h1>{t.contact_title}</h1>
       <Content>
         <Info>
-          <h2>Você gostaria de ajuda com algum projeto Frontend e/ou Design?</h2>
-          <h3>Entre em contato!</h3>
+          <h2>{t.contact_paragraph}</h2>
+          <h3>{t.contact_contact_me}</h3>
 
           <MailMeButton
             type="button"
             onClick={() => window.open(mailToLink)}
             onMouseDown={event => handleMouseDown(event, mailToLink)}
           >
-            <p>Me envie um e-mail</p>
+            <p>{t.contact_send_email}</p>
             <FiMail />
           </MailMeButton>
-          <h4>Feedbacks também são bem-vindos!</h4>
+          <h4>{t.contact_feedback}</h4>
         </Info>
 
         <BottomButtons>
@@ -84,15 +87,14 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
           onClick={() => scrollToContent('hero')}
           aria-label="scroll-to-top"
         >
-          Voltar ao início
+          {t.contact_back_to_top}
         </ButtonScrollTop>
-
-        <Footer>
-          <h3 className="rights">eduqg 2021 &#xA9; All Rights Reserved.</h3>
-
-          <h3 className="rights">v{packageJson.version}</h3>
-        </Footer>
       </Content>
+      <Footer>
+        <h3 className="rights">eduqg 2021 &#xA9; All Rights Reserved.</h3>
+
+        <h3 className="rights">v{packageJson.version}</h3>
+      </Footer>
     </Container>
   )
 }
