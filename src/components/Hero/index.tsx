@@ -80,9 +80,6 @@ const Hero: React.FC<IHeroProps> = ({ scrollToContent }) => {
           </HeaderLeft>
 
           <HeaderRight>
-            <ButtonHeader type="button" onClick={() => scrollToContent('hero')} className="home">
-              {t.home_link}
-            </ButtonHeader>
             <ButtonHeader type="button" onClick={() => scrollToContent('about')} className="about">
               {t.about_link}
             </ButtonHeader>

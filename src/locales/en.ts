@@ -5,7 +5,7 @@ export const en = {
   projects_link: 'Projects',
   contact_link: 'Contact',
   frontend_role: 'Frontend Developer',
-  design_role: 'Visual Designer',
+  design_role: 'UI/UX Designer',
 
   title_404: 'There is something wrong with this link',
   description_404: 'I think is better go back to homepage',

@@ -7,7 +7,7 @@ export const ptBr: ILocaleData = {
   projects_link: 'Projetos',
   contact_link: 'Contato',
   frontend_role: 'Desenvolvedor Frontend',
-  design_role: 'Designer Visual',
+  design_role: 'UI/UX Designer',
 
   title_404: 'Tem algo de errado com esse link',
   description_404: 'Acho melhor voltar para a página inicial',
