@@ -14,7 +14,9 @@ export const en = {
   about_title: 'About',
   about_hello: 'Hi there, my name is Eduardo.',
   about_paragraph:
-    "I'm a Brazilian Software Engineer passionate about Frontend and Design. Nowadays, I'm working with ReactJS and React Native development and Design with Figma.",
+    "I'm a Front-end Developer with over 2 years of professional experience, specializing in React.js, React Native, HTML, and CSS. Also, I'm capable of transforming Designs into clear, efficient, and organized code using Javascript/Typescript.",
+  about_paragraph_2:
+    'Solid knowledge creating, improving, and maintaining the Frontend of applications; agile methodologies; API consumption; UI Design solutions; responsive interfaces; and interaction with backend and design teams.',
   about_academic_title: 'Academic education',
   about_software_engineering: 'Software Engineering',
   about_software_engineering_graduation: 'Graduation',

@@ -40,6 +40,7 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
         <div className="about">
           <h2>{t.about_hello}</h2>
           <h2>{t.about_paragraph}</h2>
+          <h2>{t.about_paragraph_2}</h2>
         </div>
 
         <Academic>

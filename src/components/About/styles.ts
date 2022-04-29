@@ -101,6 +101,10 @@ export const Content = styled.div`
     color: rgba(255, 255, 255, 0.9);
   }
 
+  h2 + h2 {
+    margin-top: 8px;
+  }
+
   @media screen and (min-width: 640px) {
     > h1 {
       margin-bottom: 48px;
