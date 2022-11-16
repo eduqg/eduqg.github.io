@@ -91,7 +91,7 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
         </ButtonScrollTop>
       </Content>
       <Footer>
-        <h3 className="rights">eduqg 2021 &#xA9; All Rights Reserved.</h3>
+        <h3 className="rights">eduqg 2022 &#xA9; All Rights Reserved.</h3>
 
         <h3 className="rights">v{packageJson.version}</h3>
       </Footer>

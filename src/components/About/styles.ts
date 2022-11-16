@@ -92,7 +92,7 @@ export const Content = styled.div`
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 12px;
     line-height: 200%;
     font-style: normal;
     font-weight: 300;
@@ -110,7 +110,7 @@ export const Content = styled.div`
       margin-bottom: 48px;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       line-height: 180%;
     }
   }
