@@ -23,7 +23,7 @@ export const ptBr: ILocaleData = {
   about_software_engineering: 'Engenharia de Software',
   about_software_engineering_graduation: 'Graduação',
   about_design: 'User Experience Design and Beyond',
-  about_design_postgraduate: 'Pós-Graduação em andamento',
+  about_design_postgraduate: 'Pós-Graduação',
 
   projects_title: 'Projetos',
   projects_design_member: 'Integrante de Design',
@@ -32,7 +32,7 @@ export const ptBr: ILocaleData = {
   contact_title: 'Contato',
   contact_paragraph: 'Você gostaria de ajuda com algum projeto Frontend e/ou Design?',
   contact_contact_me: 'Entre em contato!',
-  contact_send_email: 'Me envie um e-mail',
+  contact_send_email: 'E-mail copiado!',
   contact_feedback: 'Feedbacks também são bem-vindos!',
   contact_back_to_top: 'Voltar ao início',
 }

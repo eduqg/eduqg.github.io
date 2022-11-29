@@ -94,7 +94,7 @@ export const Info = styled.div`
   }
 
   h4 {
-    padding-top: 16px;
+    padding-top: 40px;
   }
 
   @media screen and (min-width: 640px) {
@@ -177,8 +177,27 @@ export const BottomButtons = styled.div`
 `
 
 export const MailMeButton = styled.button`
+  color: #ffffffcc;
+  font-weight: 600;
   display: flex;
   align-items: center;
+  border: 4px solid #25252b;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: #202025;
+  gap: 8px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #25252b;
+  }
+
+  &:focus {
+    outline: none;
+    background: #25252b;
+  }
+
+  /*
   padding: 0 32px;
   cursor: pointer;
   height: 50px;
@@ -217,7 +236,7 @@ export const MailMeButton = styled.button`
 
   &:focus {
     outline: none;
-  }
+  } */
 `
 export const ButtonScrollTop = styled.button`
   font-size: 1.6rem;

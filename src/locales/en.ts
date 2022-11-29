@@ -21,7 +21,7 @@ export const en = {
   about_software_engineering: 'Software Engineering',
   about_software_engineering_graduation: 'Graduation',
   about_design: 'User Experience Design and Beyond',
-  about_design_postgraduate: 'Ongoing postgraduate',
+  about_design_postgraduate: 'Postgraduate',
 
   projects_title: 'Projects',
   projects_design_member: 'Design member',
@@ -30,7 +30,7 @@ export const en = {
   contact_title: 'Contact',
   contact_paragraph: 'Do you need help in some project with Frontend and/or Design?',
   contact_contact_me: 'Contact me!',
-  contact_send_email: 'Send me an e-mail',
+  contact_send_email: 'Copied to clipboard!',
   contact_feedback: 'Feedbacks are also welcome!',
   contact_back_to_top: 'Back to top',
 }

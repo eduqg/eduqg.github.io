@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useCallback } from 'react'
-import { FiGithub, FiLinkedin, FiMail, FiCoffee } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiCoffee } from 'react-icons/fi'
+import { MdContentCopy } from 'react-icons/md'
 
 import packageJson from '../../../package.json'
 import { useTranslation } from '@/hooks/translation'
-import { mailToLink } from '@/utils/emailMessage'
+
+import Snackbar from '../Snackbar'
 
 import {
   Container,
@@ -23,7 +25,10 @@ interface IContactMeProps {
 }
 
 const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
+  const [showSnackbarCopied, setShowSnackbarCopied] = useState(false)
   const { t } = useTranslation()
+
+  const copyEmail = 'eduardoqgomes@gmail.com'
 
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
@@ -35,21 +40,23 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
     window.open(goToUrl)
   }, [])
 
+  const handleCopyEmail = useCallback(() => {
+    setShowSnackbarCopied(true)
+    navigator.clipboard.writeText(copyEmail)
+  }, [])
+
   return (
     <Container>
       <h1>{t.contact_title}</h1>
+
       <Content>
         <Info>
           <h2>{t.contact_paragraph}</h2>
           <h3>{t.contact_contact_me}</h3>
 
-          <MailMeButton
-            type="button"
-            onClick={() => window.open(mailToLink)}
-            onMouseDown={event => handleMouseDown(event, mailToLink)}
-          >
-            <p>{t.contact_send_email}</p>
-            <FiMail />
+          <MailMeButton type="button" onClick={handleCopyEmail} onMouseDown={handleCopyEmail}>
+            <p>{copyEmail}</p>
+            <MdContentCopy size={20} />
           </MailMeButton>
           <h4>{t.contact_feedback}</h4>
         </Info>
@@ -90,6 +97,11 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
           {t.contact_back_to_top}
         </ButtonScrollTop>
       </Content>
+
+      {showSnackbarCopied && (
+        <Snackbar setShow={setShowSnackbarCopied} text={t.contact_send_email} />
+      )}
+
       <Footer>
         <h3 className="rights">eduqg 2022 &#xA9; All Rights Reserved.</h3>
 

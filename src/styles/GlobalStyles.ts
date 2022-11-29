@@ -118,6 +118,17 @@ export const appearFromTop = keyframes`
   }
 `
 
+export const hideToTop = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+`
+
 export const appearFromBottom = keyframes`
   from {
     opacity: 0;
