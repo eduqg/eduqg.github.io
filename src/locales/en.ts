@@ -14,7 +14,7 @@ export const en = {
   about_title: 'About',
   about_hello: 'Hi there, my name is Eduardo.',
   about_paragraph:
-    "I'm a Front-end Developer with 3 years of professional experience, specializing in React.js, React Native, HTML, and CSS. Also, I'm capable of transforming Designs into clear, efficient, and organized code using Javascript/Typescript.",
+    "I'm a Front-end Developer with more than 3 years of professional experience, specializing in React.js, React Native, HTML, and CSS. Also, I'm capable of transforming Designs into clear, efficient, and organized code using Javascript/Typescript.",
   about_paragraph_2:
     'Solid knowledge creating, improving, and maintaining the Frontend of applications; agile methodologies; API consumption; UI Design solutions; responsive interfaces; and interaction with backend and design teams.',
   about_academic_title: 'Academic education',

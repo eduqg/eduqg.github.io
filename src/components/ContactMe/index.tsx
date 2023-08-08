@@ -45,6 +45,8 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
     navigator.clipboard.writeText(copyEmail)
   }, [])
 
+  const year = new Date().getFullYear()
+
   return (
     <Container>
       <h1>{t.contact_title}</h1>
@@ -103,7 +105,7 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
       )}
 
       <Footer>
-        <h3 className="rights">eduqg 2022 &#xA9; All Rights Reserved.</h3>
+        <h3 className="rights">eduqg {year} &#xA9; All Rights Reserved.</h3>
 
         <h3 className="rights">v{packageJson.version}</h3>
       </Footer>

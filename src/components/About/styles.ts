@@ -115,9 +115,9 @@ export const Content = styled.div`
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) and (min-height: 800px) {
     > h1 {
-      margin-bottom: 64px;
+      margin-bottom: 32px;
     }
     h2 {
       font-size: 2rem;
@@ -145,7 +145,6 @@ export const Academic = styled.div`
   @media screen and (min-width: 640px) {
     > h2 {
       line-height: 220%;
-      margin-top: 32px;
     }
   }
 `
@@ -263,7 +262,7 @@ export const BottomButtons = styled.div`
     gap: 24px;
     width: 180px;
     justify-content: center;
-    margin-top: 64px;
+    margin-top: 32px;
 
     svg {
       width: 36px;

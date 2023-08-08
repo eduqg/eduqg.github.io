@@ -16,7 +16,7 @@ export const ptBr: ILocaleData = {
   about_title: 'Sobre',
   about_hello: 'Olá, meu nome é Eduardo.',
   about_paragraph:
-    'Sou Desenvolvedor Front-end com 3 anos de experiência profissional, especialista em React.js, React Native, HTML e CSS e capaz de tranformar Designs em código claro, eficiente e organizado utilizando Javascript / Typescript.',
+    'Sou Desenvolvedor Front-end com mais de 3 anos de experiência profissional, especialista em React.js, React Native, HTML e CSS e capaz de tranformar Designs em código claro, eficiente e organizado utilizando Javascript / Typescript.',
   about_paragraph_2:
     'Sólidos conhecimentos na criação, aperfeiçoamento e manutenção do Frontend de aplicações; utilização de metodologias ágeis; consumo de APIs; criação de soluções de UI Design; desenvolvimento de interfaces responsivas; além de interação direta com equipes de backend e design.',
   about_academic_title: 'Formação Acadêmica',
