@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
+import { differenceInYears, differenceInDays } from 'date-fns'
 import { FiGithub, FiLinkedin, FiMail, FiCoffee, FiChevronDown } from 'react-icons/fi'
 
 import { useTranslation } from '@/hooks/translation'
@@ -15,6 +16,7 @@ import {
 } from './styles'
 
 import { IScrollOptions } from '@/pages'
+import { getElapsedTimePhrase } from '@/utils/elapsedTime'
 
 interface IAboutProps {
   scrollToContent(content: IScrollOptions): void
@@ -33,13 +35,35 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
     window.open(goToUrl)
   }, [])
 
+  const timePhrase = useMemo(() => {
+    const start = new Date(2020, 0, 16)
+    const today = new Date()
+
+    const differenceYears = differenceInYears(today, start)
+
+    const differenceDaysWithStart = differenceInDays(
+      new Date(start.getFullYear(), start.getMonth(), today.getDate()),
+      start,
+    )
+
+    const elapsedTimePhrase = getElapsedTimePhrase({
+      lang: t.language as 'en' | 'pt-br',
+      moreOrExact: differenceDaysWithStart === 0 && today.getMonth() === 0 ? 'exact' : 'more',
+      years: differenceYears,
+    })
+
+    const newPhrase = t.about_paragraph.replace('[time_phrase]', elapsedTimePhrase)
+
+    return newPhrase
+  }, [t.about_paragraph, t.language])
+
   return (
     <Container>
       <h1>{t.about_title}</h1>
       <Content>
         <div className="about">
           <h2>{t.about_hello}</h2>
-          <h2>{t.about_paragraph}</h2>
+          <h2>{timePhrase}</h2>
           <h2>{t.about_paragraph_2}</h2>
         </div>
 
