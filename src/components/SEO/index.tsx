@@ -18,7 +18,6 @@ const SEO: React.FC<ISEOProps> = ({
   const pageTitle = `${title}${!shouldExcludeTitleSuffix ? ' | eduqg.github.io' : ''}`
   const pageImage = image ? `https://eduqg.github.io/${image}` : null
 
-  console.log(pageImage)
   return (
     <Head>
       <title>{pageTitle}</title>

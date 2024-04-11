@@ -58,7 +58,8 @@ const Home: React.FC = () => {
   return (
     <Container>
       <SEO
-        title="Eduardo Quintino Gomes | Frontend e Design"
+        title="Eduardo Quintino Gomes - Desenvolvedor Front-end React.js e React Native"
+        description="Olá, sou Eduardo, Desenvolvedor Front-end especializado em React.js, NextJS, React Native, HTML e CSS. Transformo designs em código claro, eficiente e organizado, utilizando Javascript / Typescript. Possuo sólidos conhecimentos em metodologias ágeis, consumo de APIs e desenvolvimento de interfaces responsivas, sou capaz de aperfeiçoar e manter o frontend de aplicações, além de interagir diretamente com equipes de backend e design."
         image="eduqg-portfolio.png"
         shouldExcludeTitleSuffix
         shouldIndexPage
