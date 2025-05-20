@@ -29,10 +29,14 @@ export const ptBr: ILocaleData = {
   projects_design_member: 'Integrante de Design',
   projects_personal: 'Pessoal',
 
-  contact_title: 'Contato',
-  contact_paragraph: 'Você gostaria de ajuda com algum projeto Frontend e/ou Design?',
-  contact_contact_me: 'Entre em contato!',
-  contact_send_email: 'E-mail copiado!',
-  contact_feedback: 'Feedbacks também são bem-vindos!',
+  contact_title: 'Vamos tornar seu projeto realidade?',
+  contact_subtitle: 'Você precisa de um site ou um design que:',
+  contact_list_item_1: 'Atraia e engaje seu público',
+  contact_list_item_2: 'Reforce a identidade da sua marca',
+  contact_list_item_3: 'Gere resultados reais (leads, vendas…)',
+  contact_paragraph_2:
+    'Eu posso construir Frontend moderno e Design sob medida para sua audiência.',
+  contact_linkedin: 'Conectar no LinkedIn',
+  contact_feedback: 'Feedbacks e dúvidas? Será um prazer conversar com você!',
   contact_back_to_top: 'Voltar ao início',
 }

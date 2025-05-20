@@ -1,9 +1,8 @@
 import React, { useCallback, useMemo } from 'react'
 import { differenceInYears, differenceInDays } from 'date-fns'
-import { FiGithub, FiLinkedin, FiMail, FiCoffee, FiChevronDown } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiCoffee, FiChevronDown } from 'react-icons/fi'
 
 import { useTranslation } from '@/hooks/translation'
-import { mailToLink } from '@/utils/emailMessage'
 
 import {
   Container,
@@ -13,6 +12,7 @@ import {
   AcademicList,
   AcademicItem,
   ButtonDown,
+  Divider,
 } from './styles'
 
 import { IScrollOptions } from '@/pages'
@@ -72,14 +72,15 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
 
           <AcademicList>
             <AcademicItem>
+              <h3>{t.about_software_engineering_graduation}</h3>
               <h2>{t.about_software_engineering}</h2>
               <h3>Universidade de Brasília - UnB/FGA</h3>
-              <h3>{t.about_software_engineering_graduation}</h3>
             </AcademicItem>
+            <Divider />
             <AcademicItem>
+              <h3>{t.about_design_postgraduate}</h3>
               <h2>{t.about_design}</h2>
               <h3>Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS</h3>
-              <h3>{t.about_design_postgraduate}</h3>
             </AcademicItem>
           </AcademicList>
         </Academic>
@@ -101,14 +102,6 @@ const About: React.FC<IAboutProps> = ({ scrollToContent }) => {
             }
           >
             <FiLinkedin />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => handleGoTo(mailToLink)}
-            onMouseDown={event => handleMouseDown(event, mailToLink)}
-          >
-            <FiMail />
           </button>
 
           <button

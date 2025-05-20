@@ -162,19 +162,17 @@ export const AcademicList = styled.div`
 `
 
 export const AcademicItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   h2 {
     font-family: 'Encode Sans Condensed';
     font-style: normal;
     font-weight: 200;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 8px;
     font-size: 1.6rem;
     line-height: 120%;
-  }
-
-  h3 + h3 {
-    margin-top: 8px;
   }
 
   h3 {
@@ -209,10 +207,17 @@ export const AcademicItem = styled.div`
   }
 `
 
+export const Divider = styled.div`
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+`
 export const BottomButtons = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 16px;
   width: 100%;

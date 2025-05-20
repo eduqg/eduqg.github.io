@@ -1,34 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCallback } from 'react'
-import { FiGithub, FiLinkedin, FiCoffee } from 'react-icons/fi'
-import { MdContentCopy } from 'react-icons/md'
+import { FiGithub, FiCoffee } from 'react-icons/fi'
 
 import packageJson from '../../../package.json'
 import { useTranslation } from '@/hooks/translation'
-
-import Snackbar from '../Snackbar'
 
 import {
   Container,
   Content,
   Info,
   BottomButtons,
-  MailMeButton,
   ButtonScrollTop,
   Footer,
+  Anchor,
+  FooterText,
+  List,
+  AnchorContainer,
 } from './styles'
 
 import { IScrollOptions } from '@/pages'
+import { linkedin } from '@/constants/social'
 
 interface IContactMeProps {
   scrollToContent(content: IScrollOptions): void
 }
 
 const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
-  const [showSnackbarCopied, setShowSnackbarCopied] = useState(false)
   const { t } = useTranslation()
-
-  const copyEmail = 'eduardoqgomes@gmail.com'
 
   const handleMouseDown = useCallback((event, goToUrl: string) => {
     if (event.button === 1) {
@@ -37,12 +35,7 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
   }, [])
 
   const handleGoTo = useCallback((goToUrl: string) => {
-    window.open(goToUrl)
-  }, [])
-
-  const handleCopyEmail = useCallback(() => {
-    setShowSnackbarCopied(true)
-    navigator.clipboard.writeText(copyEmail)
+    window.open(goToUrl, '_blank')
   }, [])
 
   const year = new Date().getFullYear()
@@ -53,14 +46,22 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
 
       <Content>
         <Info>
-          <h2>{t.contact_paragraph}</h2>
-          <h3>{t.contact_contact_me}</h3>
+          <p>{t.contact_subtitle}</p>
+          <List>
+            <li>{t.contact_list_item_1}</li>
+            <li>{t.contact_list_item_2}</li>
+            <li>{t.contact_list_item_3}</li>
+          </List>
+          <p style={{ textAlign: 'center', paddingTop: '24px' }}>{t.contact_paragraph_2}</p>
 
-          <MailMeButton type="button" onClick={handleCopyEmail} onMouseDown={handleCopyEmail}>
-            <p>{copyEmail}</p>
-            <MdContentCopy size={20} />
-          </MailMeButton>
-          <h4>{t.contact_feedback}</h4>
+          <AnchorContainer>
+            <Anchor href={linkedin} target="_blank">
+              <img src="/eduardo.png" alt="Eduardo Quintino" />
+              {t.contact_linkedin}
+            </Anchor>
+          </AnchorContainer>
+
+          <FooterText>{t.contact_feedback}</FooterText>
         </Info>
 
         <BottomButtons>
@@ -70,16 +71,6 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
             onMouseDown={event => handleMouseDown(event, 'https://github.com/eduqg')}
           >
             <FiGithub />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => handleGoTo('https://www.linkedin.com/in/eduardo-quintino/')}
-            onMouseDown={event =>
-              handleMouseDown(event, 'https://www.linkedin.com/in/eduardo-quintino/')
-            }
-          >
-            <FiLinkedin />
           </button>
 
           <button
@@ -99,10 +90,6 @@ const ContactMe: React.FC<IContactMeProps> = ({ scrollToContent }) => {
           {t.contact_back_to_top}
         </ButtonScrollTop>
       </Content>
-
-      {showSnackbarCopied && (
-        <Snackbar setShow={setShowSnackbarCopied} text={t.contact_send_email} />
-      )}
 
       <Footer>
         <h3 className="rights">eduqg {year} &#xA9; All Rights Reserved.</h3>
